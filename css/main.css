@@ -1,0 +1,130 @@
+@font-face {
+  src:
+    url("../fonts/SteppeBook.woff2"),
+    url("../fonts/SteppeBook.woff");
+  font-family: "Steppe";
+  font-weight: 400;
+}
+
+@font-face {
+  src:
+    url("../fonts/SteppeExtraBold.woff2"),
+    url("../fonts/SteppeExtraBold.woff");
+  font-family: "Steppe";
+  font-weight: 800;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.page {
+  height: 100%;
+  font-family: "Steppe", sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+
+.page__body {
+  margin: 0;
+  min-width: 280px;
+  min-height: 100%;
+  font-weight: 400;
+  font-size: 18px;
+  color: #fff;
+  background-color: #5243f4;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn {
+  outline: none;
+  border: none;
+  border-radius: 60px;
+  padding: 21px 47px 19px;
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 1;
+  color: #5243f4;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #eee;
+}
+
+.header {
+  padding: 40px 0;
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  margin-right: 250px;
+}
+
+.logo__img {
+  vertical-align: bottom;
+}
+
+.nav__list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 50px;
+}
+
+.nav__link {
+  font-size: 16px;
+  line-height: 1.3;
+  color: #fff;
+}
+
+.nav__link:hover {
+  border-bottom: 2px solid #fff;
+}
+
+.info {
+  padding: 161px 0 200px;
+}
+
+.info__content {
+  max-width: 811px;
+}
+
+.info__title {
+  margin: 0 0 20px;
+  font-weight: 800;
+  font-size: 90px;
+  line-height: 1;
+}
+
+.info__descr {
+  margin: 0 0 40px;
+  max-width: 697px;
+  line-height: 1.3;
+}
+
+.info__img {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
