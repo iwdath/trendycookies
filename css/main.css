@@ -70,6 +70,7 @@ a {
   font-weight: 800;
   font-size: 60px;
   line-height: 1;
+  text-align: center;
 }
 
 .header {
@@ -146,8 +147,7 @@ a {
 }
 
 .products__title {
-  margin-bottom: 110px;
-  text-align: center;
+  margin: 0 0 110px;
 }
 
 .products__list {
@@ -218,4 +218,36 @@ a {
 
 .product__btn:hover {
   background-color: #3b2cd8;
+}
+
+.love {
+  padding: 64px 0 150px;
+}
+
+.love__title {
+  margin: 0 0 40px;
+}
+
+.love__content {
+  display: flex;
+  gap: 20px;
+}
+
+.love__text {
+  padding: 110px 80px;
+  background-color: #fff;
+  color: #5d3427;
+  max-height: 453px;
+}
+
+.love__subtitle {
+  margin: 0 0 20px;
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.love__descr {
+  margin: 0;
+  line-height: 1.3;
 }
