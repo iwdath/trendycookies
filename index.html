@@ -20,9 +20,9 @@
         </a>
         <nav class="nav">
           <ul class="nav__list list-reset">
-            <li class="nav__item"><a class="nav__link" href="#">Каталог</a></li>
-            <li class="nav__item"><a class="nav__link" href="#">О нас</a></li>
-            <li class="nav__item"><a class="nav__link" href="#">Оформление заказа</a></li>
+            <li class="nav__item"><a class="nav__link" data-link="products">Каталог</a></li>
+            <li class="nav__item"><a class="nav__link" data-link="love">О нас</a></li>
+            <li class="nav__item"><a class="nav__link" data-link="order">Оформление заказа</a></li>
           </ul>
         </nav>
       </div>
@@ -34,12 +34,12 @@
           <div class="info__content">
             <h1 class="info__title">Магия вкуса в каждой крошке</h1>
             <p class="info__descr">Наши рецепты вдыхают жизнь в изысканность ингредиентов: ароматное натуральное масло, свежие сливки, чистый мёд и отборная мука. Мы тщательно отбираем каждый компонент премиального печенья, стремясь подарить вам истинное кулинарное наслаждение.</p>
-            <button class="btn info__btn">Заказать</button>
+            <button class="btn info__btn" id="main-action-btn">Заказать</button>
           </div>
           <img class="info__img" src="img/cookie.png" srcset="img/cookie_2x.png 2x" aria-hidden="true" width="909" height="852" alt="Cookie decor">
         </div>
       </section>
-      <section class="products">
+      <section class="products" id="products">
         <div class="container products__container">
           <img class="line line--2" src="img/line-2.svg" aria-hidden="true" alt="Decorative line">
           <h2 class="title products__title">Выберите печенье</h2>
@@ -239,7 +239,7 @@
           </ul>
         </div>
       </section>
-      <section class="love">
+      <section class="love" id="love">
         <div class="container love__container">
           <h2 class="title love__title">Пекарня с любовью</h2>
           <div class="love__content">
@@ -253,7 +253,7 @@
           </div>
         </div>
       </section>
-      <section class="order">
+      <section class="order" id="order">
         <img class="line line--3" src="img/line-3.svg" aria-hidden="true" alt="Decorative line">
         <div class="container order__container">
           <h2 class="title order__title">Закажите печенье</h2>
@@ -280,5 +280,6 @@
       <span class="footer__rights">«Все права защищены»</span>
     </footer>
   </div>
+  <script src="js/main.js"></script>
 </body>
 </html>

@@ -242,7 +242,7 @@ a {
 }
 
 .love {
-  padding: 64px 0 150px;
+  padding: 64px 0 100px;
 }
 
 .love__title {
@@ -274,12 +274,12 @@ a {
 }
 
 .order {
-  padding-bottom: 102px;
+  padding: 64px 0 102px;
   position: relative;
 }
 
 .line--3 {
-  top: -920px;
+  top: -870px;
   left: 0;
 }
 
