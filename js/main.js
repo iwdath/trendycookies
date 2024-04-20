@@ -38,3 +38,25 @@ document.getElementById('change-currency').onclick = function (e) {
 }
 
 
+const product = document.getElementById('product-input');
+const name = document.getElementById('name-input');
+const phone = document.getElementById('phone-input');
+document.getElementById('order-action-btn').onclick = function () {
+  let hasError = false;
+  
+  [product, name, phone].forEach(item => {
+    if (!item.value) {
+      item.style.borderColor = 'red';
+      hasError = true;
+    } else {
+      item.style.borderColor = '';
+    }
+  });
+  
+  if (!hasError) {
+    [product, name, phone].forEach(item => {
+      item.value = '';
+    });
+    alert('Спасибо за заказ! Мы скоро свяжемся с вами!');
+  }
+}
