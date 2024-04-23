@@ -3,7 +3,7 @@ document.getElementById('main-action-btn').onclick = function () {
 }
 
 const links = document.querySelectorAll('.nav__link');
-for (i = 0; i < links.length; i++) {
+for (let i = 0; i < links.length; i++) {
   links[i].onclick = function () {
     document.getElementById(links[i].getAttribute('data-link')).scrollIntoView({ behavior: 'smooth' });
   }
