@@ -1,18 +1,18 @@
 document.getElementById('main-action-btn').onclick = function () {
-  document.getElementById('products').scrollIntoView({behavior: 'smooth'});
+  document.getElementById('products').scrollIntoView({ behavior: 'smooth' });
 }
 
 const links = document.querySelectorAll('.nav__link');
-for ( i = 0; i < links.length; i++) {
+for (i = 0; i < links.length; i++) {
   links[i].onclick = function () {
-  document.getElementById(links[i].getAttribute('data-link')).scrollIntoView({behavior: 'smooth'});
+    document.getElementById(links[i].getAttribute('data-link')).scrollIntoView({ behavior: 'smooth' });
   }
 }
 
 const btns = document.querySelectorAll('.product__btn');
 for (let i = 0; i < btns.length; i++) {
   btns[i].onclick = function () {
-  document.getElementById('order').scrollIntoView({behavior: 'smooth'});
+    document.getElementById('order').scrollIntoView({ behavior: 'smooth' });
   }
 }
 
@@ -49,7 +49,7 @@ const name = document.getElementById('name-input');
 const phone = document.getElementById('phone-input');
 document.getElementById('order-action-btn').onclick = function () {
   let hasError = false;
-  
+
   [product, name, phone].forEach(item => {
     if (!item.value) {
       item.style.borderColor = 'red';
@@ -58,7 +58,7 @@ document.getElementById('order-action-btn').onclick = function () {
       item.style.borderColor = '';
     }
   });
-  
+
   if (!hasError) {
     [product, name, phone].forEach(item => {
       item.value = '';
