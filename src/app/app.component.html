@@ -1,0 +1,94 @@
+<div class="site-container">
+  <div class="currency" title="Изменить валюту" (click)="changeCurrency()">{{currency}}</div>
+  <header class="header">
+    <div class="container header__container">
+      <a class="logo header__logo">
+        <img class="logo__img" src="./assets/img/logo.svg" alt="Логотип Trendy cookies">
+      </a>
+      <nav class="nav">
+        <ul class="nav__list list-reset">
+          <li class="nav__item"><a class="nav__link" (click)="scrollTo(products)">Каталог</a></li>
+          <li class="nav__item"><a class="nav__link" (click)="scrollTo(love)">О нас</a></li>
+          <li class="nav__item"><a class="nav__link" (click)="scrollTo(order)">Оформление заказа</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main class="main">
+    <section class="info">
+      <div class="container info__container">
+        <img class="line line--1" src="./assets/img/line-1.svg" aria-hidden="true" alt="Декоративная линия">
+        <div class="info__content">
+          <h1 class="info__title">Магия вкуса в каждой крошке</h1>
+          <p class="info__descr">Наши рецепты вдыхают жизнь в изысканность ингредиентов: ароматное натуральное масло, свежие сливки, чистый мёд и отборная мука. Мы тщательно отбираем каждый компонент премиального печенья, стремясь подарить вам истинное кулинарное наслаждение.</p>
+          <button class="btn info__btn" (click)="scrollTo(products)">Заказать</button>
+        </div>
+        <img class="info__img" src="./assets/img/cookie.png" srcset="./assets/img/cookie_2x.png 2x" aria-hidden="true" width="909" height="852" alt="Печенье">
+      </div>
+    </section>
+    <section class="products" #products>
+      <div class="container products__container">
+        <img class="line line--2" src="./assets/img/line-2.svg" aria-hidden="true" alt="Декоративная линия">
+        <h2 class="title products__title">Выберите печенье</h2>
+        <ul class="products__list list-reset">
+          <li class="product" *ngFor="let product of productsData">
+            <img class="product__img" src="./assets/img/product-{{product.img}}.png" srcset="./assets/img/product-{{product.img}}_2x.png 2x" loading="lazy" width="384" height="272" alt="Печенье">
+            <div class="product__content">
+              <h3 class="product__title">{{product.title}}</h3>
+              <p class="product__descr">
+                {{product.descr}}
+              </p>
+              <div class="product__extra">
+                <div class="product__info">
+                  <span class="product__price">{{product.price}} {{currency}}</span>
+                  <span class="product__weight">{{product.weight}}</span>
+                </div>
+                <button class="btn product__btn" (click)="scrollTo(order)">Заказать</button>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="love" #love>
+      <div class="container love__container">
+        <h2 class="title love__title">Пекарня с любовью</h2>
+        <div class="love__content">
+          <div class="love__text">
+            <h3 class="love__subtitle">Приготовлено с заботой, чтобы радовать вас каждый день</h3>
+            <p class="love__descr">
+              Мы с гордостью представляем наше печенье, которое мы выпекаем вручную каждый день с 1995 года, используя только лучшие ингредиенты. Погрузитесь в мир изысканных лакомств, приготовленных с применением передовых технологий, и насладитесь их неповторимым вкусом.
+            </p>
+          </div>
+          <img class="love__img" src="./assets/img/love.jpg" srcset="./assets/img/love_2x.jpg 2x" loading="lazy" width="590" height="453" alt="Печенье">
+        </div>
+      </div>
+    </section>
+    <section class="order" #order>
+      <img class="line line--3" src="./assets/img/line-3.svg" aria-hidden="true" alt="Декоративная линия">
+      <div class="container order__container">
+        <h2 class="title order__title">Закажите печенье</h2>
+        <img class="order__decor" src="./assets/img/breadcrumbs.png" srcset="./assets/img/breadcrumbs_2x.png 2x" loading="lazy" aria-hidden="true" width="" height="" alt="Крошки">
+        <div class="order__content">
+          <form class="form" action="#" [formGroup]="form">
+            <p class="form__descr">
+              Откройте для себя волшебство вкуса с нашим премиальным печеньем! Закажите прямо сейчас и окунитесь в мир сладких наслаждений.
+            </p>
+            <input class="form__input" type="text" placeholder="Выберите печенье"
+            formControlName="product" [class]="{'error': form.get('product')?.invalid && (form.get('product')?.dirty || form.get('product')?.touched)}">
+            <input class="form__input" type="text" placeholder="Ваше имя" formControlName="name" [class]="{'error': form.get('name')?.invalid && (form.get('name')?.dirty || form.get('name')?.touched)}">
+            <input class="form__input" type="tel" placeholder="Ваш телефон" formControlName="phone" [class]="{'error': form.get('phone')?.invalid && (form.get('phone')?.dirty || form.get('phone')?.touched)}">
+            <button class="btn form__btn" (click)="confirmOrder()" [disabled]="!form.valid">Оформить заказ</button>
+          </form>
+          <img class="order__img" src="./assets/img/order.png" srcset="./assets/img/order_2x.png 2x" loading="lazy" width="468" height="559" alt="Печенье">
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <a class="logo footer__logo">
+      <img class="logo__img" src="./assets/img/logo.svg" alt="Логотип Trendy cookies">
+    </a>
+    <span class="footer__rights">«Все права защищены»</span>
+  </footer>
+</div>
