@@ -267,10 +267,9 @@
   background-color: #5243f4;
 }
 
-.btn:disabled {
+.form__btn:disabled {
   color: #808080;
   background-color: #343434;
-  cursor: not-allowed;
 }
 
 .form__btn:hover:not(:disabled) {

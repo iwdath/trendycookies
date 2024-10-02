@@ -1,11 +1,14 @@
 import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
+
 export class AppComponent {
   currency = '$';
 
@@ -116,9 +119,7 @@ export class AppComponent {
     phone: ['', Validators.required],
   });
 
-  constructor(private fb: FormBuilder) {
-
-  }
+  constructor(private fb: FormBuilder) {}
 
 
   scrollTo(target: HTMLElement) {
@@ -129,6 +130,7 @@ export class AppComponent {
   changeCurrency() {
     let newCurrency = '$';
     let coefficient = 1;
+
     if (this.currency === '$') {
       newCurrency = '₽';
       coefficient = 90;

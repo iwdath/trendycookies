@@ -114,6 +114,10 @@ a {
   cursor: pointer;
 }
 
+.btn:disabled {
+  cursor: not-allowed;
+}
+
 .title {
   font-weight: 800;
   font-size: 60px;
