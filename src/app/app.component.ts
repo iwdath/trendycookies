@@ -119,11 +119,14 @@ export class AppComponent {
     phone: ['', Validators.required],
   });
 
-  constructor(private fb: FormBuilder) {}
+  constructor(private fb: FormBuilder) { }
 
 
-  scrollTo(target: HTMLElement) {
+  scrollTo(target: HTMLElement, product?: any) {
     target.scrollIntoView({ behavior: 'smooth' });
+    if (product) {
+      this.form.patchValue({ product: product.title + ' (' + product.price + ' ' + this.currency + ')' });
+    }
   }
 
 

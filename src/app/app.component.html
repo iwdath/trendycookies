@@ -43,7 +43,7 @@
                   <span class="product__price">{{product.price}} {{currency}}</span>
                   <span class="product__weight">{{product.weight}}</span>
                 </div>
-                <button class="btn product__btn" (click)="scrollTo(order)">Заказать</button>
+                <button class="btn product__btn" (click)="scrollTo(order, product)">Заказать</button>
               </div>
             </div>
           </li>
@@ -74,7 +74,7 @@
             <p class="form__descr">
               Откройте для себя волшебство вкуса с нашим премиальным печеньем! Закажите прямо сейчас и окунитесь в мир сладких наслаждений.
             </p>
-            <input class="form__input" type="text" placeholder="Выберите печенье" formControlName="product" [class]="{'error': form.get('product')?.invalid && (form.get('product')?.dirty || form.get('product')?.touched)}">
+            <input class="form__input" type="text" placeholder="Выберите печенье" readonly formControlName="product" [class]="{'error': form.get('product')?.invalid && (form.get('product')?.dirty || form.get('product')?.touched)}">
             <input class="form__input" type="text" placeholder="Ваше имя" formControlName="name" [class]="{'error': form.get('name')?.invalid && (form.get('name')?.dirty || form.get('name')?.touched)}">
             <input class="form__input" type="tel" placeholder="Ваш телефон" formControlName="phone" [class]="{'error': form.get('phone')?.invalid && (form.get('phone')?.dirty || form.get('phone')?.touched)}">
             <button class="btn form__btn" (click)="confirmOrder()" [disabled]="!form.valid">Оформить заказ</button>
