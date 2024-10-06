@@ -84,6 +84,7 @@ html {
   font-size: 16px;
   line-height: 18px;
   text-align: center;
+  background-color: #5243F4;
   transform: scale(1);
   animation: pulse 2s infinite;
   cursor: pointer;
