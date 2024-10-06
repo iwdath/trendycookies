@@ -88,6 +88,55 @@
   margin: 0 0 110px;
 }
 
+.sugar-free {
+  position: relative;
+  top: -80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+  font-size: 0;
+  gap: 20px;
+}
+
+.sugar-free__title {
+  font-size: 18px;
+}
+
+.sugar-free__checkbox {
+  display: none;
+}
+
+.sugar-free__label {
+  position: relative;
+  border: 2px solid #fff;
+  border-radius: 50px;
+  width: 80px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.sugar-free__label::after {
+  content: '';
+  position: absolute;
+  left: 3px;
+  top: 3px;
+  border-radius: 45px;
+  width: 30px;
+  height: 30px;
+  background: #fff;
+  transition: .3s;
+}
+
+.sugar-free__checkbox:checked+.sugar-free__label::after {
+  left: calc(100% - 5px);
+  transform: translateX(-100%);
+}
+
+.sugar-free label:active::after {
+  width: 50px;
+}
+
 .products__list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

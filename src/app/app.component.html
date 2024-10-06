@@ -30,6 +30,12 @@
       <div class="container products__container">
         <img class="line line--2" src="./assets/img/line-2.svg" aria-hidden="true" alt="Декоративная линия">
         <h2 class="title products__title">Выберите печенье</h2>
+        <div class="sugar-free">
+          <span class="sugar-free__title">Все</span>
+          <input class="sugar-free__checkbox" id="switch" type="checkbox" (change)="switchSugarFree($event)">
+          <label class="sugar-free__label" for="switch"></label>
+          <span class="sugar-free__title">Без сахара</span>
+        </div>
         <ul class="products__list list-reset">
           <li class="product" *ngFor="let product of productsData">
             <img class="product__img" src="{{product.image}}" loading="lazy" width="384" height="272" alt="Печенье">
