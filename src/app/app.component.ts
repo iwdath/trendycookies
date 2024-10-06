@@ -11,6 +11,10 @@ import { FormBuilder, Validators } from '@angular/forms';
 
 
 export class AppComponent {
+  loader = true;
+  loaderShowed = true;
+
+
   currency = '$';
 
 
@@ -39,6 +43,15 @@ export class AppComponent {
 
 
   ngOnInit() {
+    setTimeout(() => {
+      this.loaderShowed = false;
+    }, 2000);
+
+    setTimeout(() => {
+      this.loader = false;
+    }, 3000);
+
+
     this.http.get("https://testologia.ru/cookies").subscribe(data => this.productsData = data)
   }
 
