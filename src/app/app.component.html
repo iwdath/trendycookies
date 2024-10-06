@@ -32,11 +32,11 @@
         <h2 class="title products__title">Выберите печенье</h2>
         <ul class="products__list list-reset">
           <li class="product" *ngFor="let product of productsData">
-            <img class="product__img" src="./assets/img/product-{{product.img}}.png" srcset="./assets/img/product-{{product.img}}_2x.png 2x" loading="lazy" width="384" height="272" alt="Печенье">
+            <img class="product__img" src="{{product.image}}" loading="lazy" width="384" height="272" alt="Печенье">
             <div class="product__content">
               <h3 class="product__title">{{product.title}}</h3>
               <p class="product__descr">
-                {{product.descr}}
+                {{product.text}}
               </p>
               <div class="product__extra">
                 <div class="product__info">
