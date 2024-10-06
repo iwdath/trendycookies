@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 
 
@@ -22,6 +22,17 @@ export class AppComponent {
     name: ['', Validators.required],
     phone: ['', Validators.required],
   });
+
+
+  mainImageStyle: any;
+  orderImageStyle: any;
+
+  @HostListener("document:mousemove", ["$event"])
+
+  onMouseMove(e: MouseEvent) {
+    this.mainImageStyle = { transform: "translate(" + ((e.clientX * 0.3) / 8) + "px," + ((e.clientY * 0.3) / 8) + "px)" };
+    this.orderImageStyle = { transform: "translate(-" + ((e.clientX * 0.3) / 8) + "px,-" + ((e.clientY * 0.3) / 8) + "px)" };
+  }
 
 
   constructor(private fb: FormBuilder, private http: HttpClient) { }

@@ -154,6 +154,11 @@
   position: absolute;
   top: -70px;
   max-width: 100%;
+  transition: all .5s ease;
+}
+
+.product__img:hover {
+  transform: scale(1.1);
 }
 
 .product__content {
